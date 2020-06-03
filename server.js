@@ -3,6 +3,11 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const mongoose = require("mongoose");
 const db = require("./config/keys").MONGOURI;
+const passport = require("passport");
+
+// Body Parsor Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 //Routes
 const user = require("./routes/api/users"); // /api/users
@@ -15,7 +20,11 @@ mongoose
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
 
-app.get("/", (req, res) => res.send("Hello!"));
+// Passport Middleware
+app.use(passport.initialize());
+
+// Passport Config
+require("./config/passport")(passport);
 
 // Use Routes
 app.use("/api/user", user);
