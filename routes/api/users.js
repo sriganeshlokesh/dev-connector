@@ -7,6 +7,10 @@ const jwt = require("jsonwebtoken");
 const keys = require("../../config/keys");
 const passport = require("passport");
 
+//Load Input Validation
+const validateRegisterInput = require("../../validation/register");
+const validateLoginInput = require("../../validation/login");
+
 // @route GET /api/user/test
 // @desc Tests user route
 // @access Public
@@ -18,9 +22,17 @@ router.get("/test", (req, res) => {
 // @desc Register user route
 // @access Public
 router.post("/register", (req, res) => {
+  const { errors, isValid } = validateRegisterInput(req.body);
+
+  // Check Validation
+  if (!isValid) {
+    return res.status(400).json(errors);
+  }
+
   User.findOne({ email: req.body.email }).then((user) => {
     if (user) {
-      return res.status(400).json({ email: "Email Already Registered" });
+      errors.email = "Email already registered!";
+      return res.status(400).json(errors);
     } else {
       const avatar = gravatar.url(req.body.email, {
         s: "200",
@@ -54,13 +66,21 @@ router.post("/register", (req, res) => {
 // @desc Login user route - Returning JWT Token
 // @access Public
 router.post("/login", (req, res) => {
+  const { errors, isValid } = validateLoginInput(req.body);
+
+  // Check Validation
+  if (!isValid) {
+    return res.status(400).json(errors);
+  }
+
   const email = req.body.email;
   const password = req.body.password;
   // Find the user by email
   User.findOne({ email }).then((user) => {
     // Check for user
     if (!user) {
-      return res.status(404).json({ email: "User Not Found" });
+      errors.email = "User not found";
+      return res.status(404).json(errors);
     } else {
       // Check Password
       bcrypt.compare(password, user.password).then((isMatch) => {
@@ -76,7 +96,8 @@ router.post("/login", (req, res) => {
             res.json({ success: true, token: "Bearer " + token });
           });
         } else {
-          return res.status(400).json({ password: "Incorrect Password" });
+          errors.password = "Incorrect password";
+          return res.status(400).json(errors);
         }
       });
     }
