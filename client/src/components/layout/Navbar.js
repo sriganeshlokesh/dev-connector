@@ -1,43 +1,44 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Navbar extends Component {
   state = {};
   render() {
     return (
-      <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
-        <div class="container">
-          <a class="navbar-brand" href="landing.html">
+      <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
+        <div className="container">
+          <Link className="navbar-brand" to="/">
             DevConnector
-          </a>
+          </Link>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#mobile-nav"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse" id="mobile-nav">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="profiles.html">
+          <div className="collapse navbar-collapse" id="mobile-nav">
+            <ul className="navbar-nav mr-auto">
+              <li className="nav-item">
+                <Link className="nav-link" to="/profiles">
                   {" "}
                   Developers
-                </a>
+                </Link>
               </li>
             </ul>
 
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="register.html">
+            <ul className="navbar-nav ml-auto">
+              <li className="nav-item">
+                <Link className="nav-link" to="/register">
                   Sign Up
-                </a>
+                </Link>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="login.html">
+              <li className="nav-item">
+                <Link className="nav-link" to="/login">
                   Login
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
