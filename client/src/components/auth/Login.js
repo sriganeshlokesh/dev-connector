@@ -54,7 +54,7 @@ class Login extends Component {
             <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
             <h3>Welcome Developers</h3>
             <p>Join The Developer Paradise</p>
-            <Link to="/login" className="orangeBtn">
+            <Link to="/register" className="orangeBtn">
               Register
             </Link>
             <br />
@@ -67,7 +67,7 @@ class Login extends Component {
                 role="tabpanel"
                 aria-labelledby="home-tab"
               >
-                <h3 className="register-heading text-white bold">Login</h3>
+                <h3 className="register-heading bold">Login</h3>
                 <div className="row login-form">
                   <form
                     noValidate
@@ -108,44 +108,6 @@ class Login extends Component {
           </div>
         </div>
       </div>
-      // <div classNameName="login">
-      //   <div classNameName="container">
-      //     <div className="row">
-      //       <div className="col-md-8 m-auto">
-      //         <h1 className="display-4 text-center">Log In</h1>
-      //         <p className="lead text-center">
-      //           Sign in to your DevConnector account
-      //         </p>
-      //         <form onSubmit={this.onSubmit}>
-      //           <TextField
-      //             placeholder="Email Address"
-      //             name="email"
-      //             type="email"
-      //             value={this.state.email}
-      //             onChange={this.onChange}
-      //             className={classnames("form-control form-control-lg", {
-      //               "is-invalid": errors.email,
-      //             })}
-      //             error={errors.email}
-      //           />
-      //           <TextField
-      //             type="password"
-      //             placeholder="Password"
-      //             name="password"
-      //             value={this.state.password}
-      //             onChange={this.onChange}
-      //             error={errors.password}
-      //             className={classnames("form-control form-control-lg", {
-      //               "is-invalid": errors.password,
-      //             })}
-      //           />
-
-      //           <input type="submit" className="btn btn-info btn-block mt-4" />
-      //         </form>
-      //       </div>
-      //     </div>
-      //   </div>
-      // </div>
     );
   }
 }

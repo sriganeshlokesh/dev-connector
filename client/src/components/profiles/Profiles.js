@@ -30,8 +30,10 @@ class Profiles extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <h1 className="display-4 text-center">Developer Profiles</h1>
-              <p className="lead text-center">
+              <h1 className="display-4 text-center heading-align">
+                Developer Profiles
+              </h1>
+              <p className="lead text-center heading-align ">
                 Browse and Connect with Developers
               </p>
               {profileItems}

@@ -69,7 +69,7 @@ class Register extends Component {
                 role="tabpanel"
                 aria-labelledby="home-tab"
               >
-                <h3 className="register-heading text-white bold">Register</h3>
+                <h3 className="register-heading bold">Register</h3>
                 <div className="row register-form">
                   <form noValidate onSubmit={this.onSubmit}>
                     <div className="form-group">
@@ -132,65 +132,6 @@ class Register extends Component {
           </div>
         </div>
       </div>
-      // <div className="register">
-      //   <div className="container">
-      //     <div className="row">
-      //       <div className="col-md-8 m-auto">
-      //         <h1 className="display-4 text-center">Sign Up</h1>
-      //         <p className="lead text-center">
-      //           Create your DevConnector account
-      //         </p>
-      //         <form noValidate onSubmit={this.onSubmit}>
-      //           <TextField
-      //             className={classnames("form-control form-control-lg", {
-      //               "is-invalid": errors.name,
-      //             })}
-      //             placeholder="Name"
-      //             name="name"
-      //             value={this.state.name}
-      //             onChange={this.onChange}
-      //             error={errors.name}
-      //           />
-      //           <TextField
-      //             className={classnames("form-control form-control-lg", {
-      //               "is-invalid": errors.email,
-      //             })}
-      //             placeholder="Email Address"
-      //             name="email"
-      //             value={this.state.email}
-      //             onChange={this.onChange}
-      //             error={errors.email}
-      //             info="This site uses Gravatar so if you want a profile image, use
-      //               a Gravatar email"
-      //           />
-      //           <TextField
-      //             className={classnames("form-control form-control-lg", {
-      //               "is-invalid": errors.password,
-      //             })}
-      //             placeholder="Password"
-      //             name="password"
-      //             value={this.state.password}
-      //             onChange={this.onChange}
-      //             type="password"
-      //             error={errors.password}
-      //           />
-      //           <TextField
-      //             className={classnames("form-control form-control-lg", {
-      //               "is-invalid": errors.password2,
-      //             })}
-      //             placeholder="Confirm Password"
-      //             name="password2"
-      //             value={this.state.password2}
-      //             type="password"
-      //             onChange={this.onChange}
-      //             error={errors.password2}
-      //           />
-      //           <input type="submit" className="btn btn-info btn-block mt-4" />
-      //         </form>
-      //       </div>
-      //     </div>
-      //   </div>
-      // </div>
     );
   }
 }
