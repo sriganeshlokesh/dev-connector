@@ -20,17 +20,17 @@ class Education extends Component {
           <Moment format="YYYY/MM/DD">{edu.to}</Moment>
         </td>
         <td>
-          <button onClick={this.onDelete} className="btn btn-danger">
-            Delete
+          <button onClick={this.onDelete} className="delete">
+            <i className="fa fa-trash"></i>
           </button>
         </td>
       </tr>
     ));
     return (
       <div>
-        <h4 className="mb-4">Education</h4>
+        <h4 className="mb-4 text-center bold">Education</h4>
         <table className="table">
-          <thead>
+          <thead className="table-head">
             <tr>
               <th>Company</th>
               <th>Title</th>
@@ -39,7 +39,7 @@ class Education extends Component {
               <th></th>
             </tr>
           </thead>
-          <tbody>{edu}</tbody>
+          <tbody className="table-body">{edu}</tbody>
         </table>
       </div>
     );

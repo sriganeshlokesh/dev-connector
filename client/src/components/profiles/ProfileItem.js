@@ -27,18 +27,18 @@ class ProfileItem extends Component {
           <div class="course-info">
             <div class="courses-container">
               <div className="container">
-                <h3>
-                  {" "}
-                  {isEmpty(profile.location) ? null : (
-                    <span>{profile.location}</span>
-                  )}
-                </h3>
                 <h4>
                   {profile.status}{" "}
                   {isEmpty(profile.company) ? null : (
                     <span>at {profile.company}</span>
                   )}
                 </h4>
+                <h5>
+                  {" "}
+                  {isEmpty(profile.location) ? null : (
+                    <span>{profile.location}</span>
+                  )}
+                </h5>
               </div>
 
               <div className="transparent">

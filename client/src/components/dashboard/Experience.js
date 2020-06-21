@@ -19,17 +19,17 @@ class Experience extends Component {
           <Moment format="YYYY/MM/DD">{exp.to}</Moment>
         </td>
         <td>
-          <button onClick={this.onDelete} className="btn btn-danger">
-            Delete
+          <button onClick={this.onDelete} className="delete">
+            <i className="fa fa-trash"></i>
           </button>
         </td>
       </tr>
     ));
     return (
       <div>
-        <h4 className="mb-4">Experience</h4>
-        <table className="table">
-          <thead>
+        <h4 className="mb-4 text-center bold">Experience</h4>
+        <table className="table spacing">
+          <thead className="table-head">
             <tr>
               <th>Company</th>
               <th>Title</th>
@@ -37,7 +37,7 @@ class Experience extends Component {
               <th></th>
             </tr>
           </thead>
-          <tbody>{exp}</tbody>
+          <tbody className="table-body">{exp}</tbody>
         </table>
       </div>
     );

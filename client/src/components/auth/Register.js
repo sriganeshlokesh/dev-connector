@@ -55,7 +55,10 @@ class Register extends Component {
           <div className="col-md-3 register-left">
             <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
             <h3>Welcome Developers</h3>
-            <p>Join The Developer Paradise</p>
+            <p>
+              Join The Social Network to Interact with other developers and
+              broaden your developer comrade
+            </p>
             <Link to="/login" className="orangeBtn">
               Login
             </Link>

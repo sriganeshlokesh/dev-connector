@@ -7,8 +7,42 @@ body {
   font-family: Poppins;
 }
 
+.user {
+  color: #2b2d42;
+  font-weight: bolder;
+}
+
+.user:hover {
+  color: #ef233c;
+}
+
+span {
+  border: 0.2rem;
+  border-color: #fff;
+  color: #ef233c;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 a {
   color: #fff;
+}
+.head {
+  line-height: 1.66;
+  margin-top: 10%;
+  padding: 0;
+  font-weight: bolder;
+  color: #2b2d42;
+  font-family: Poppins;
+  font-size: 70px;
 }
 
 a:hover {
@@ -33,7 +67,7 @@ a:hover {
 
 .landing {
   position: relative;
-  background: #457b9d;
+  background: #2b2d42;
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -45,13 +79,31 @@ a:hover {
   padding-top: 80px;
 }
 
+.devconnector img {
+  width: 90%;
+  float: left;
+  margin-top: 20%;
+  margin-bottom: 10%;
+}
+
+.devconnector .heading {
+  color: #2b2d42;
+  font-size: 80px;
+  font-weight: bolder;
+  margin-top: 5rem;
+}
+
 .dark-overlay {
-  background-color: #457b9d;
+  background-color: #edf2f4;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+}
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .card-form {
@@ -141,6 +193,24 @@ a:hover {
   cursor: pointer;
 }
 
+.row {
+  margin-bottom: 80px;
+  margin-left: 0.1%;
+}
+
+.row a {
+  margin-right: 220px;
+  width: 80%;
+}
+
+.pactions a:hover {
+  border: 2px solid #d90429;
+  color: #d90429;
+}
+
+.text-left {
+  margin-top: 0.4%;
+}
 .register-heading {
   text-align: center;
   margin-top: 8%;
@@ -176,11 +246,18 @@ a:hover {
 }
 
 .orange {
-  background-color: #ca0101;
-  margin-left: 10px;
+  margin-top: 10%;
+  margin-left: 12%;
+  border: none;
   border-radius: 0.5rem;
-  font-weight: bold;
-  font-family: Poppins;
+  padding: 2%;
+  background: #ca0101;
+  color: #fff;
+  font-weight: 600;
+  width: 30%;
+  float: left;
+  cursor: pointer;
+  text-align: center;
 }
 
 .form-width {
@@ -197,4 +274,84 @@ a:hover {
 
 .card-profile li {
   color: #403d39;
+}
+
+/* Clear floats (clearfix hack) */
+.btngroup:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btngroup button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btngroup button:hover {
+  background-color: #3e8e41;
+}
+
+thead .table-head {
+  border-top-left-radius: 0.8rem;
+}
+
+.table-head {
+  background-color: #d90429;
+  color: #fff;
+  text-align: center;
+}
+
+.table-body {
+  background-color: #e5e5e5;
+  text-align: center;
+}
+
+.table-body td {
+  padding-top: 2%;
+}
+
+.spacing {
+  margin-bottom: 5%;
+}
+
+table th:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+table th:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+table td:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+table td:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+.delete {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 5%;
+  background: #ca0101;
+  color: #fff;
+  font-weight: 600;
+  width: 50px;
+  cursor: pointer;
+}
+
+.account-delete {
+  margin-top: 10%;
+  margin-left: 40%;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 2%;
+  background: #ca0101;
+  color: #fff;
+  font-weight: bolder;
+  width: 20%;
+  font-size: 20px;
+  cursor: pointer;
 }

@@ -32,13 +32,16 @@ class Dashboard extends Component {
         dashboardContent = (
           <div>
             <p className="lead text-muted">
-              Welcome <Link to={`/profile/${profile.handle}`}>{user.name}</Link>
+              Welcome{" "}
+              <Link to={`/profile/${profile.handle}`} className="user">
+                {user.name}
+              </Link>
             </p>
             <ProfileActions />
             <Experience experience={profile.experience} />
             <Education education={profile.education} />
             <div style={{ marginBottom: "60px" }} />
-            <button onClick={this.onDelete} className="btn btn-danger">
+            <button onClick={this.onDelete} className="account-delete">
               Delete Account
             </button>
           </div>
