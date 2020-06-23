@@ -60,10 +60,12 @@ class AddEducation extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              <Link to="/dashboard" className="btn btn-light">
+              <Link to="/dashboard" className="go-back-button">
                 Go Back
               </Link>
-              <h1 className="display-4 text-center">Add Education</h1>
+              <h1 className="display-4 text-center">
+                <span>Add</span> Education
+              </h1>
               <p className="lead text-center">
                 Add any school, bootcamp, etc that you have attended
               </p>
@@ -129,11 +131,7 @@ class AddEducation extends Component {
                   error={errors.description}
                   info="Tell us about the program that you were in"
                 />
-                <input
-                  type="submit"
-                  value="Submit"
-                  className="btn btn-info btn-block mt-4"
-                />
+                <input type="submit" value="Submit" className="submit-button" />
               </form>
             </div>
           </div>

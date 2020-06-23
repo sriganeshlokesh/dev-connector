@@ -18,12 +18,13 @@ class Navbar extends Component {
       <ul className="navbar-nav ml-auto">
         <li className="nav-item red">
           <Link className="nav-link" to="/feed">
+            <i class="fa fa-envelope-open fa-fw" aria-hidden="true"></i>
             Post Feed
           </Link>
         </li>
         <li className="nav-item red">
           <Link className="nav-link" to="/dashboard">
-            Dashboard
+            <i class="fa fa-home fa-fw"></i>Dashboard
           </Link>
         </li>
         <li className="nav-item red">
@@ -45,11 +46,13 @@ class Navbar extends Component {
       <ul className="navbar-nav ml-auto">
         <li className="nav-item red">
           <Link className="nav-link" to="/register">
+            <i class="fa fa-user-plus fa-fw" aria-hidden="true"></i>
             Sign Up
           </Link>
         </li>
         <li className="nav-item red">
           <Link className="nav-link" to="/login">
+            <i class="fa fa-user-circle fa-fw" aria-hidden="true"></i>
             Login
           </Link>
         </li>
@@ -76,6 +79,7 @@ class Navbar extends Component {
               <li className="nav-item red">
                 <Link className="nav-link" to="/profiles">
                   {" "}
+                  <i class="fa fa-github-alt fa-fw" aria-hidden="true"></i>
                   Developers
                 </Link>
               </li>

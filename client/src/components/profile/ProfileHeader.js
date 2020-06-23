@@ -8,9 +8,9 @@ class ProfileHeader extends Component {
     return (
       <div className="row">
         <div className="col-md-12">
-          <div className="card card-body bg-info text-white mb-3">
+          <div className="card card-body bg-card-header text-white mb-3">
             <div className="row">
-              <div className="col-4 col-md-3 m-auto">
+              <div className="col-md-3 m-auto">
                 <img
                   className="rounded-circle"
                   src={profile.user.avatar}
@@ -19,7 +19,7 @@ class ProfileHeader extends Component {
               </div>
             </div>
             <div className="text-center">
-              <h1 className="display-4 text-center">{profile.user.name}</h1>
+              <h1 className="display-5 text-center">{profile.user.name}</h1>
               <p className="lead text-center">
                 {profile.status}{" "}
                 {isEmpty(profile.company) ? null : (
@@ -27,7 +27,7 @@ class ProfileHeader extends Component {
                 )}
               </p>
               {isEmpty(profile.location) ? null : <p>{profile.location}</p>}
-              <p>
+              <p className="social-logo">
                 {isEmpty(profile.website) ? null : (
                   <a
                     className="text-white p-2"
@@ -84,7 +84,7 @@ class ProfileHeader extends Component {
                     href={profile.social.instagram}
                     target="_blank"
                   >
-                    <i className="fa  fa-instagram fa-2x" />
+                    <i className="fa fa-instagram fa-2x" />
                   </a>
                 )}
               </p>

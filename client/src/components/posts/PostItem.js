@@ -34,7 +34,7 @@ class PostItem extends Component {
       <div className="card card-body mb-3">
         <div className="row">
           <div className="col-md-2">
-            <a href="profile.html">
+            <a href="profile">
               <img
                 className="rounded-circle d-none d-md-block"
                 src={post.avatar}
@@ -51,7 +51,7 @@ class PostItem extends Component {
                 <button
                   onClick={this.onLikeClick.bind(this, post._id)}
                   type="button"
-                  className="btn btn-light mr-1"
+                  className="like-button mr-1"
                 >
                   <i
                     className={classnames("fa fa-thumbs-up", {
@@ -63,18 +63,21 @@ class PostItem extends Component {
                 <button
                   onClick={this.onUnlikeClick.bind(this, post._id)}
                   type="button"
-                  className="btn btn-light mr-1"
+                  className="like-button mr-1"
                 >
                   <i className="text-secondary fa fa-thumbs-down" />
                 </button>
-                <Link to={`/post/${post._id}`} className="btn btn-info mr-1">
+                <Link
+                  to={`/post/${post._id}`}
+                  className="comment-button text-center"
+                >
                   Comments
                 </Link>
                 {post.user === auth.user.id ? (
                   <button
                     onClick={this.onDeleteClick.bind(this, post._id)}
                     type="button"
-                    className="btn btn-danger mr-1"
+                    className="delete-post mr-1"
                   >
                     <i className="fa fa-times" />
                   </button>
