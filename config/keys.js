@@ -1,5 +1,7 @@
-module.exports = {
-  MONGOURI:
-    "mongodb+srv://user_001:J941TZqUmaDzIenV@testcluster1-dps7d.mongodb.net/dev_connector?retryWrites=true&w=majority",
-  SECRET: "secret",
-};
+const e = require("express");
+
+if (process.env.NODE_ENV === "production") {
+  module.exports = require("./keys_prod");
+} else {
+  module.exports = require("./keys_dev");
+}
